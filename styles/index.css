@@ -1,11 +1,25 @@
+.overlay {
+    position: fixed;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    opacity: 0.1;
+    pointer-events: none
+    /* background-color: transparent; */
+    /* background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(74, 138, 143, 0) 50%, rgba(0, 212, 255, 1) 100%); */
+    /* background: rgb(0, 0, 0); */
+    /* background: radial-gradient(circle, rgba(0, 0, 0, 0.165703781512605) 0%, rgba(0, 0, 0, 0.16290266106442575) 60%, rgba(0, 0, 0, 0.27494747899159666) 100%); */
+}
+
 .site-wrapper {
     width: 100vw;
     height: 100vh;
     /* background-color: black; */
-    background-image: url('../images/posters/poster.webp');
+    /* background-image: url('../images/posters/poster.webp'); */
     background-size: cover;
     background-position: center;
-    background-repeat: none;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,43 +30,74 @@
 
 .site-wrapper * {
     /* border: 1px solid white; */
+    transition: 1s;
 }
 
 .topBar-wrapper {
+    /* border: 1px solid white; */
     width: 95%;
     height: 5%;
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: row;
     align-content: center;
     /* padding: 0px 10px 0px 100px; */
-    position: relative;
+    /* position: relative; */
     /* align-items: flex-start; */
 }
 
 .topBar-logo {
+    /* border: 1px solid white; */
     color: red;
     font-size: 35px;
     align-self: center;
+    /* justify-self: center; */
     font-weight: 600;
-    margin-right: 15px;
+    cursor: pointer;
+    /* margin-right: 35px; */
     /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+
+.topBar-logo:hover {
+    /* box-shadow: 120px 80px 40px 20px red; */
+    /* text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+    text-shadow: rgba(242, 24, 24, 0.99) 0px 0px 28px;
 }
 
 .options {
     color: white;
+    opacity: 0.7;
     padding-right: 10px;
-    font-size: 14px;
+    font-size: 17px;
+    cursor: pointer;
     font-family: 'Martel Sans', sans-serif;
 }
 
+.options:hover {
+    opacity: 1;
+}
+
 .topBar-options {
+    flex: 1;
+    /* width: 100%; */
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: row;
     width: fit-content;
     align-items: center;
+    /* align-content: center; */
+    /* align-self: center; */
+    /* justify-self: center; */
+    padding-left: 35px;
+    justify-content: left;
     font-family: 'Montserrat Subrayada', sans-serif;
     /* border: */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .topBar-options {
+        padding-left: 0px;
+        justify-content: center;
+    }
 }
 
 .topBar-options-home {}
@@ -65,8 +110,11 @@
     height: 32px;
     border-radius: 50%;
     align-self: center;
-    position: absolute;
+    /* position: absolute; */
     right: 15px;
+    background-image: url('../images/userIcons/user1.jpg');
+    background-position: center;
+    background-size: contain;
     /* justify-self: flex-end; */
 }
 
