@@ -24,7 +24,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    box-shadow: inset 0 0 100px black;
+    /* box-shadow: inset 0 0 100px black; */
     /* justify-content: center; */
 }
 
@@ -151,6 +151,7 @@
 }
 
 .preview-container-title {
+    /* border: 1px solid white; */
     font-size: 50px;
     /* justify: center; */
     /* text-align: left; */
@@ -164,6 +165,7 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     .preview-container-title {
         text-align: center;
+        font-size: 35px;
     }
 }
 
@@ -229,13 +231,48 @@
 
 .details {}
 
-.preview-container-details {}
+.preview-container-details {
+    /* border: 1px solid white; */
+    display: flex;
+    margin-bottom: 5px;
+    width: fit-content;
+    /* align-self: flex-end; */
+    /* justify-self: center; */
+    /* justify-content: center; */
+    background-color: rgba(0, 0, 0, 0.205);
+    /* box-shadow: inset 0 0 5px black; */
+}
+
+.preview-container-details * {
+    color: white;
+    /* flex: 1; */
+    margin-left: 5px;
+    font-weight: 900;
+    white-space: nowrap;
+    /* border-left: 1px solid white; */
+    /* align-self: center; */
+    /* justify-self: center; */
+    /* border: 1px solid white; */
+    /* text-align: center; */
+    /* text-justify: center; */
+    /* align-content: center; */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .preview-container-details {
+        justify-content: center;
+    }
+}
 
 .preview-container-details-year {}
 
 .preview-container-details-genre {}
 
-.preview-container-details-rating {}
+.preview-container-details-match {}
+
+.preview-container-details-rating {
+    display: flex;
+}
 
 .preview-container-description {
     font-size: 20px;
@@ -244,21 +281,47 @@
     text-align: left;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    /* padding: 0px 5px 0px 15px; */
     /* font-family: 'Montserrat Subrayada', sans-serif; */
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     .preview-container-description {
         text-align: center;
+        height: 0px;
     }
 }
 
 .rec-wrapper {
-    width: 95%;
-    height: 30%;
     /* border: 1px solid white; */
+    /* width: 95%; */
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    /* align-content: center; */
+    /* justify-content: flex-end; */
+    /* overflow-y: scroll; */
+    /* overflow-x: visible; */
+    position: relative;
 }
 
-.rec-item {}
+.rec-item {
+    border: 1px solid white;
+    width: 110px;
+    height: 200px;
+    margin: 0px 10px 0px 10px;
+}
 
-.rec-item-select {}
+.rec-item-select {
+    /* height: 250px; */
+    margin-bottom: 20px;
+    /* align-self: center; */
+    /* justify-self: center; */
+    /* bottom: 0px; */
+    /* position: relative; */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .rec-item {}
+    .rec-item-select {}
+}
