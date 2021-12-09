@@ -24,7 +24,7 @@ var movies = [{
     },
 ]
 
-var current_movie = movies[1];
+var current_movie = movies[0];
 
 // SETTING IT MANUALLY
 // var current_movie = {
