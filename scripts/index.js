@@ -22,6 +22,25 @@ var movies = [{
         match: 65,
         description: '',
     },
+    {
+        title: 'TRANSFORMERS',
+        image: '../images/posters/poster1.jpg',
+        rating: 3,
+        year: 2007,
+        genre: 'Sci-Fi',
+        match: 65,
+        description: '',
+    },
+    {
+        title: 'TRANSFORMERS',
+        image: '../images/posters/poster1.jpg',
+        rating: 3,
+        year: 2007,
+        genre: 'Sci-Fi',
+        match: 65,
+        description: '',
+    },
+
 ]
 
 var current_movie = movies[0];
@@ -59,11 +78,43 @@ function setFilmDetails(movie) {
     $('.preview-container-description').text(description);
     fillRatings(rating);
     setColorStuff(image);
+    fillRecommendations('.rec-wrapper', movies);
 
 
 
 
 }
+
+function fillRecommendations(div, movieArray) {
+    $(div).html(``);
+    for (var m = 0; m < movieArray.length; m++) {
+        var movie = movieArray[m];
+        var title = movie.title;
+        var image = movie.image;
+        var rating = movie.rating;
+        var year = movie.year;
+        var genre = movie.genre;
+        var match = movie.match + '% Match';
+        var description = movie.description;
+        var id = 'rec-item-main_' + m;
+        var id_ = `#` + id;
+        var image_link = `url(${image})`;
+        console.log(title);
+        console.log(image);
+        console.log(id_);
+        var template = `
+        <div class='rec-item' >
+            <div id='${id}' data-movie_id='${m}' class='rec-item-main'></div>
+        </div>
+        `;
+        $(div).append(template);
+        $(id_).css('background-image', image_link);
+        if (m == 0) {
+            $(id_).addClass('rec-item-main-select');
+        }
+    }
+}
+
 
 function fillRatings(rating) {
     // var rating = movie.rating;
