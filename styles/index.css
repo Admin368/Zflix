@@ -290,7 +290,7 @@ text-align: center; */
     .preview-container-description {
         text-align: center;
         height: 0px;
-        ove
+        overflow: hidden;
     }
 }
 
