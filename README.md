@@ -7,5 +7,6 @@ With Functionality
 - Functional customized player
 
 
-#SCREENSHOTS
+# SCREENSHOTS
 ![alt text](https://github.com/Admin368/Zflix/blob/main/screenshots/index_desktop.png?raw=true)
+![alt text](https://github.com/Admin368/Zflix/blob/main/screenshots/index_mobile.png?raw=true)
