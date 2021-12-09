@@ -1,6 +1,6 @@
 # Zflix
 Netflix Clone
-With Fucntionality
+With Functionality
 - Movie info Fetching
 - Movie Recommendations
 - Adaptive bitrate streaming (requires video preprocessing to hls mutliple resolutions)
