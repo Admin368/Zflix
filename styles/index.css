@@ -297,7 +297,8 @@ text-align: center; */
 .rec-wrapper {
     display: flex;
     flex-direction: row;
-    width: fit-content;
+    /* width: fit-content; */
+    /* width: 100%; */
     max-width: 100%;
     height: 25%!important;
     overflow-y: hidden;
@@ -308,7 +309,7 @@ text-align: center; */
     min-width: 200px;
     flex-shrink: 0;
     position: relative;
-    width: 200px;
+    /* width: 25%; */
     height: 90%;
     margin: 0px 10px 0px 10px;
 }
@@ -319,14 +320,19 @@ text-align: center; */
     padding-top: 56%;
     background-color: white;
     top: 10%;
-    background-image: url('/images/posters/poster.webp');
+    /* background-image: url('../images/posters/poster.webp'); */
     background-size: contain;
     border-radius: 5px;
     box-shadow: inset 0 0 10px black;
+    /* box-shadow: inset 0 0 20px ; */
     filter: brightness(150%);
 }
 
-.rec-item-select {}
+.rec-item-main-select {
+    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px var(--select_color);
+    /* box-shadow: white 0px 22px 10px 4px; */
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
     .rec-item {}
