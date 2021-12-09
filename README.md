@@ -9,4 +9,6 @@ With Functionality
 
 # SCREENSHOTS
 ![alt text](https://github.com/Admin368/Zflix/blob/main/screenshots/index_desktop.png?raw=true)
-![alt text](https://github.com/Admin368/Zflix/blob/main/screenshots/index_mobile.png?raw=true)
+<p align="center">
+    <img src="https://github.com/Admin368/Zflix/blob/main/screenshots/index_mobile.jpg" style="justify-self:center" width="320"/>
+</p>
