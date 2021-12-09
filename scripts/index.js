@@ -42,8 +42,8 @@ var movies = [{
     },
 
 ]
-
-var current_movie = movies[0];
+var current_movie_id = 1;
+var current_movie = movies[current_movie_id];
 
 // SETTING IT MANUALLY
 // var current_movie = {
@@ -109,7 +109,7 @@ function fillRecommendations(div, movieArray) {
         `;
         $(div).append(template);
         $(id_).css('background-image', image_link);
-        if (m == 0) {
+        if (m == current_movie_id) {
             $(id_).addClass('rec-item-main-select');
         }
     }
