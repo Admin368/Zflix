@@ -330,7 +330,7 @@ text-align: center; */
 
 .rec-item-main-select {
     box-shadow: 0 0 10px white;
-    box-shadow: 0 0 10px var(--select_color);
+    /* box-shadow: 0 0 10px var(--select_color); */
     /* box-shadow: white 0px 22px 10px 4px; */
 }
 
