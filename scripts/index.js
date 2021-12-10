@@ -117,7 +117,7 @@ function setFilmDetails(movie) {
     $('.preview-container-details-match').text(match);
     $('.preview-container-description').text(description);
     fillRatings(rating);
-    setColorStuff(image);
+    setColorStuff(image); // !!! BUG - MAKING BODY INCREASE IN SIZE (temp fix hml overflow hidden)
     fillRecommendations('.rec-wrapper', movies);
 
 }
@@ -194,9 +194,10 @@ function setColorStuff(image) {
     var c3 = 'rgb(91,30,232,0.27494747899159666)';
     var p;
     let v = new Vibrant(image)
+
+    // !!! BUG - MAKING BODY INCREASE IN SIZE
     v.getPalette().then((palette) => {
         var p = palette;
-        // console.log(palette);
         var c1 = p.Muted.getHex();
         var c2 = p.LightMuted.getHex();
         var c3 = p.Vibrant.getHex();

@@ -2,9 +2,14 @@
     --select_color: white;
 }
 
+html {
+    overflow: hidden !important;
+}
+
 body {
     margin: 0px;
     font-family: 'Montserrat Subrayada', sans-serif;
+    overflow: hidden !important;
     /* background-color: black; */
 }
 
@@ -12,18 +17,23 @@ body {
     box-shadow: inset 0 0 100px black;
 }
 
-body::-webkit-scrollbar {
-    width: 1x;
-    height: 1px;
+*::-webkit-scrollbar {
+    width: 5x;
+    height: 5px;
+    background-color: transparent;
 }
 
-body::-webkit-scrollbar-track {
-    width: 1px;
-    height: 1px;
+*::-webkit-scrollbar-track {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
     /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
 }
 
-body::-webkit-scrollbar-thumb {
-    background-color: red;
-    outline: 1px solid slategrey;
+*::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 0, 0, 0.959);
+    /* border-radius: 25px;s */
+    /* outline: 1px solid slategrey; */
 }
