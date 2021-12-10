@@ -61,6 +61,36 @@ $(document).ready(() => {
     setFilmDetails(current_movie);
 });
 
+$('.rec-wrapper').on('click', '.rec-item', (e) => {
+    console.log('clicked');
+    console.log(e.target.id);
+    var id = e.target.id;
+    var $id = '#' + id;
+    var movie_id = $($id).data('movie_id');
+    console.log("movie_id:" + movie_id);
+    selectMovie(movie_id)
+
+})
+
+function selectMovie(movie_id) {
+    var old_movie_id = current_movie_id;
+    console.log('old_movie_id:' + old_movie_id);
+    current_movie_id = movie_id;
+    console.log('current_movie_id:' + current_movie_id);
+
+    // REMOVED OLD SELECT
+    var $old_movie_id = '#rec-item-main_' + old_movie_id;
+    $($old_movie_id).removeClass('rec-item-main-select');
+
+    // SET NEW SELECT
+    var $current_movie_id = '#rec-item-main_' + current_movie_id;
+    $($current_movie_id).addClass('rec-item-main-select');
+
+
+
+}
+
+
 function setFilmDetails(movie) {
     var title = movie.title;
     var image = movie.image;
