@@ -42,8 +42,10 @@ var movies = [{
     },
 
 ]
-var current_movie_id = 1;
-var current_movie = movies[current_movie_id];
+var current_movie_id = null;
+var current_movie = [];
+
+setCurrent_movie(0);
 
 // SETTING IT MANUALLY
 // var current_movie = {
@@ -72,6 +74,12 @@ $('.rec-wrapper').on('click', '.rec-item', (e) => {
 
 })
 
+function setCurrent_movie(id) {
+    current_movie_id = id;
+    current_movie = movies[current_movie_id];
+}
+
+
 function selectMovie(movie_id) {
     var old_movie_id = current_movie_id;
     console.log('old_movie_id:' + old_movie_id);
@@ -86,6 +94,8 @@ function selectMovie(movie_id) {
     var $current_movie_id = '#rec-item-main_' + current_movie_id;
     $($current_movie_id).addClass('rec-item-main-select');
 
+    setCurrent_movie(current_movie_id);
+    setFilmDetails(current_movie);
 
 
 }
@@ -109,9 +119,6 @@ function setFilmDetails(movie) {
     fillRatings(rating);
     setColorStuff(image);
     fillRecommendations('.rec-wrapper', movies);
-
-
-
 
 }
 
